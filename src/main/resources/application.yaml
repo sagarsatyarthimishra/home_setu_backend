@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: HomeSetu
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/homesetu
+    username: postgres
+    password: Qurilo@1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC   # ✅ MUST match DB
+
+  jackson:
+    time-zone: Asia/Kolkata  # ✅ API responses India time
+
+security:
+  jwt:
+    secret: homesetu-secret-key23y74897239803498******87398274897287ydbgfudeggyu
+    expiration: 86400000
