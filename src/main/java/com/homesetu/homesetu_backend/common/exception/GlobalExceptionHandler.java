@@ -16,6 +16,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiResponse<?>> handleException(Exception ex) {
+        ex.printStackTrace(); // 🔥 VERY IMPORTANT (TEMP)
         return ResponseEntity.internalServerError()
                 .body(ApiResponse.failure("Something went wrong"));
     }

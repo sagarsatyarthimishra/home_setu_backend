@@ -22,5 +22,5 @@ spring:
 
 security:
   jwt:
-    secret: homesetu-secret-key23y74897239803498******87398274897287ydbgfudeggyu
+    secret: homesetusecretkey23y7489723980349899qasgyy87398274897287ydbgfudeggyu
     expiration: 86400000
