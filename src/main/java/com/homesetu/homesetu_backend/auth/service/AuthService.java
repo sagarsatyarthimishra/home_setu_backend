@@ -16,8 +16,8 @@ public class AuthService {
     private final OtpService otpService;
     private  final JwtUtil jwtUtil;
 
-    public void sendOtp(String mobile) {
-        otpService.sendOtp(mobile);
+    public String sendOtp(String mobile) {
+        return otpService.sendOtp(mobile);
     }
 
     public AuthResponse verifyOtpAndLogin(String mobile, String otp) {

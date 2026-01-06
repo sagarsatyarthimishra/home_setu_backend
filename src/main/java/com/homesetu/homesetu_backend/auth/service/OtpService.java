@@ -13,7 +13,7 @@ public class OtpService {
 
     private final OtpVerificationRepository otpRepo;
 
-    public void sendOtp(String mobile) {
+    public String sendOtp(String mobile) {
 
         // 🔁 delete old OTP (if exists)
         otpRepo.deleteByMobile(mobile);
@@ -31,6 +31,7 @@ public class OtpService {
 
         // TEMP: SMS integration later
         System.out.println("OTP for " + mobile + " = " + otp);
+        return otp;
     }
 
     public void verifyOtp(String mobile, String otp) {

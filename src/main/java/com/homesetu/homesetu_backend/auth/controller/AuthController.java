@@ -16,8 +16,8 @@ public class AuthController {
 
     @PostMapping("/send-otp")
     public ApiResponse<?> sendOtp(@Valid @RequestBody SendOtpRequest req) {
-        authService.sendOtp(req.getMobile());
-        return ApiResponse.success("OTP sent successfully", null);
+        String otp = authService.sendOtp(req.getMobile());
+        return ApiResponse.success("OTP sent successfully", otp);
     }
 
     @PostMapping("/verify-otp")
